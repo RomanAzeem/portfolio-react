@@ -1,8 +1,11 @@
+import * as React from "react";
+const Navbar = React.lazy(() => import("components/Navbar"));
+
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <React.Suspense fallback={<div>Loading...</div>}>
+      <Navbar />
+    </React.Suspense>
   )
 }
 
