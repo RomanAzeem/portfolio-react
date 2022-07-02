@@ -1,22 +1,17 @@
 import * as React from "react";
-const Navbar = React.lazy(() => import("components/Navbar"));
-const Home = React.lazy(() => import("components/Home"));
-const About = React.lazy(() => import("components/About"));
-const Skills = React.lazy(() => import("components/Skills"));
-const Work = React.lazy(() => import("components/Work"));
-const Contact = React.lazy(() => import("components/Contact"));
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+const AppRoutes = React.lazy(() => import("AppRoutes"));
 
 
 function App() {
   return (
-    <React.Suspense fallback={<div>Loading...</div>}>
-      <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Work />
-      <Contact />
-    </React.Suspense>
+    <Router>
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<AppRoutes />} />
+        </Routes>
+      </React.Suspense>
+    </Router>
   )
 }
 
