@@ -15,7 +15,7 @@
     "react-scroll": "^1.8.7",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://romanazeem.com",
+  "homepage": "https://RomanAzeem.github.io/portfolio-react",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
